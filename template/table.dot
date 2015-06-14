@@ -1,0 +1,19 @@
+{{ if (it.success) { }}
+<h2>使用方法二</h2>
+<table style="width:200px;text-align:center;">
+<tr>
+	<th>姓名</th>
+	<th>年龄</th>
+	<th>性别</th>
+</tr>
+{{~ it.data : d }}
+<tr>
+	<td>{{=d.name}}</td>
+	<td>{{=d.age}}</td>
+	<td>{{=d.sex}}</td>
+</tr>
+{{~}}
+</table>
+{{ }else{ }}
+	<h2>暂时没有数据</h2>
+{{ } }}
